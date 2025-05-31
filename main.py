@@ -2,12 +2,13 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import metrics
-
 import os
 
-current_directory = os.getcwd()
-print(current_directory)
-data = pd.read_csv(r".\data\iris.csv")
+pathname = os.path.dirname(sys.argv[0])
+path = os.path.abspath(pathname)
+data_dir = os.path.join('data','iris.csv')
+csv_path = os.path.join(path,data_dir)
+data = pd.read_csv(csv_path)
 
 data.head(5)
 
