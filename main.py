@@ -3,6 +3,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import metrics
 
+import os
+
+current_directory = os.getcwd()
+print(current_directory)
 data = pd.read_csv(r".\data\iris.csv")
 
 data.head(5)
